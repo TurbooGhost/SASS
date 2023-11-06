@@ -46,32 +46,49 @@ $colors: (
     color: $val;
   }
 
+  .text-hover-#{$key}:hover {
+    &:hover {
+      color: $val;
+    }
+
+    &:last-child {
+
+    }
+
+    &:nth-child(2){
+        
+    }
+  }
+
   .bg-#{$key} {
     background-color: $val;
   }
 
-  // light variations
-  @for $i from 1 through 9 {
-    .text-#{$key}-light-#{$i} {
-      color: mix(white, $val, $i * 10%);
+  @if ($val != black and $val != white) {
+    // light variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10%);
+      }
+
+      .bg-#{$key}-light-#{$i} {
+        background-color: mix(white, $val, $i * 10%);
+      }
     }
 
-    .bg-#{$key}-light-#{$i} {
-      background-color: mix(white, $val, $i * 10%);
-    }
-  }
+    // dark variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: mix(black, $val, $i * 10%);
+      }
 
-  // dark variations
-  @for $i from 1 through 9 {
-    .text-#{$key}-dark-#{$i} {
-      color: mix(black, $val, $i * 10%);
-    }
-
-    .bg-#{$key}-dark-#{$i} {
-      background-color: mix(black, $val, $i * 10%);
+      .bg-#{$key}-dark-#{$i} {
+        background-color: mix(black, $val, $i * 10%);
+      }
     }
   }
 }
+
 
 @if (10 > 5) {
   test-if {
@@ -82,3 +99,14 @@ $colors: (
     color: white;
   }
 }
+
+
+// @debug map-get($colors, "purple");
+// @debug map-has-key($colors, "secondary");
+// @debug map-remove($colors, "primary");
+// @debug map-merge(
+//   $colors,
+//   (
+//     "pink": #ffc0cb
+//   )
+// );
