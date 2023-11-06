@@ -5,3 +5,35 @@ Sass is a stylesheet language that’s compiled to CSS. It allows you to use var
 // @debug math.div(8, 4);
 // @debug math.floor(2.6);
 // @debug math.max(1, 15);
+
+// Maps 
+// This is a map down below
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "blue": #19196e,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "green": #19e635,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white
+);
+
+.test-btn {
+  background-color: map-get($colors, "purple"); // how to apply them
+}
+
+@debug map-get($colors, "purple"); // get the key
+@debug map-has-key($colors, "secondary"); // returing t/f
+@debug map-remove($colors, "primary"); // remove the key
+@debug map-merge(
+  $colors,
+  (
+    "pink": #ffc0cb // adding stuff to the map
+  )
+);
