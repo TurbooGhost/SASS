@@ -118,3 +118,5 @@ $colors: (
     @content; ?????
   }
 }
+
+    @extend %flex-layout;
