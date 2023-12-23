@@ -1,11 +1,11 @@
 // variables && functions
-@import "functions";
-@import "variables";
+@import "abstracts/functions";
+@import "abstracts/variables";
 
 // base && layout
-@import "base";
-@import "breakpoints";
-@import "grid";
+@import "base/base";
+@import "layout/breakpoints";
+@import "layout/grid";
 
 // colors
 @import "colors";
@@ -17,4 +17,4 @@
 @import "components/badge";
 
 // utilities (margin, padding, opacity)
-@import "utilities";
+@import "base/utilities";
