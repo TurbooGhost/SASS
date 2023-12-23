@@ -2,13 +2,13 @@
 
 ## Install dependencies
 ```
-npm install gulp
+npm init -y
 ```
 
 
 ## Running
 ```
-npx gulp
+npm run sass
 ```
 
 
