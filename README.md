@@ -29,14 +29,3 @@ To get the project up and running on your local machine, follow these simple ste
 ## Feedback and Issues :speech_balloon:
 
 We welcome feedback and issue reports :memo: to help improve the Sassify Library. Feel free to open an issue on GitHub :octocat: if you encounter any problems or have suggestions for enhancements.
-
-
-
-![Turboo Library](https://github.com/TurbooGhost/SASS/assets/61920916/7f9c475f-046f-492c-9e6d-99bcda629854)
-
-
-
-
-
-
-
